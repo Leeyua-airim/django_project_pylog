@@ -6,6 +6,6 @@ from blog.views import post_list
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('post/', post_list)
+    path('posts/', post_list)
 ]
 
