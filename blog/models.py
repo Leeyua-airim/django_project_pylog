@@ -5,6 +5,11 @@ class Post(models.Model):
     title = models.CharField("포스트 제목", max_length=100)
     content = models.TextField("포스트 내용")
 
+    # 이미지 관련 행
+    thumbnail = models.ImageField(verbose_name="썸네일 이미지", # 관리자 페이지에서의 출력이름
+                                  upload_to="post", # 업로드된 이미지 파일이 저장될 서브 디렉터리
+                                  blank=True) # 비워둘 수 있음
+
     # Admin 상의 표기
     def __str__(self):
         return self.title
